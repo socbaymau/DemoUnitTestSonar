@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "47rcrPLhuU5htYB6Lh7todXRX7z5aqNYiGVSqMTz9Irrgtrn1YIIzf3FvEJuF7S5p4BHL/wyu8w9TivEcjjLdQ==",
+  "dgSpecHash": "rlirNyMJDX82nqUVELnSlcw6lpCONCZP9sIcu3IQp/ZcoMpsXynf3ijQZjg678e9/o9zLYKJBJpLziuWFzFymg==",
   "success": true,
-  "projectFilePath": "D:\\DemoUnitTest\\DemoProject\\UnitTest\\UnitTest.csproj",
+  "projectFilePath": "D:\\DemoUnitTestSonar\\DemoProject\\UnitTest\\UnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tnngo\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\tnngo\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",

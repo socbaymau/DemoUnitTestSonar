@@ -6550,11 +6550,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DemoUnitTest\\DemoProject\\DemoProject\\DemoProject.csproj",
+      "projectUniqueName": "D:\\DemoUnitTestSonar\\DemoProject\\DemoProject\\DemoProject.csproj",
       "projectName": "DemoProject",
-      "projectPath": "D:\\DemoUnitTest\\DemoProject\\DemoProject\\DemoProject.csproj",
+      "projectPath": "D:\\DemoUnitTestSonar\\DemoProject\\DemoProject\\DemoProject.csproj",
       "packagesPath": "C:\\Users\\tnngo\\.nuget\\packages\\",
-      "outputPath": "D:\\DemoUnitTest\\DemoProject\\DemoProject\\obj\\",
+      "outputPath": "D:\\DemoUnitTestSonar\\DemoProject\\DemoProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -6578,11 +6578,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\DemoUnitTest\\DemoProject\\Data\\Data.csproj": {
-              "projectPath": "D:\\DemoUnitTest\\DemoProject\\Data\\Data.csproj"
+            "D:\\DemoUnitTestSonar\\DemoProject\\Data\\Data.csproj": {
+              "projectPath": "D:\\DemoUnitTestSonar\\DemoProject\\Data\\Data.csproj"
             },
-            "D:\\DemoUnitTest\\DemoProject\\Servers\\Services.csproj": {
-              "projectPath": "D:\\DemoUnitTest\\DemoProject\\Servers\\Services.csproj"
+            "D:\\DemoUnitTestSonar\\DemoProject\\Servers\\Services.csproj": {
+              "projectPath": "D:\\DemoUnitTestSonar\\DemoProject\\Servers\\Services.csproj"
             }
           }
         }

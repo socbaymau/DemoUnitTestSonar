@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yFYQ6mH93J+migk07m2Af1bf8t35F5s0Sd1bn6ASNwDUh9ohKfSwTnflylOvFbBu4aH0qj16GFofaqDgGhB7xA==",
+  "dgSpecHash": "7JsyORWw5CmENntix8IZJu8gFlcVdDxb7YlY46l6sz880qNcJWAQanF1601oSO1G/4TyEZWcWNkPRApmEWtJ/A==",
   "success": true,
-  "projectFilePath": "D:\\DemoUnitTest\\DemoProject\\DemoProject\\DemoProject.csproj",
+  "projectFilePath": "D:\\DemoUnitTestSonar\\DemoProject\\DemoProject\\DemoProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tnngo\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -6420,11 +6420,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DemoUnitTest\\DemoProject\\Data\\Data.csproj",
+      "projectUniqueName": "D:\\DemoUnitTestSonar\\DemoProject\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\DemoUnitTest\\DemoProject\\Data\\Data.csproj",
+      "projectPath": "D:\\DemoUnitTestSonar\\DemoProject\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\tnngo\\.nuget\\packages\\",
-      "outputPath": "D:\\DemoUnitTest\\DemoProject\\Data\\obj\\",
+      "outputPath": "D:\\DemoUnitTestSonar\\DemoProject\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1,0 +1,27 @@
+version: '3'
+services:
+  sql-server-db:
+    container_name: sql-server-db
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+    restart: always
+
+  DemoProject:
+    image: video-test
+    build: 
+         context: ./DemoProject
+         dockerfile: ./DemoProject/Dockerfile
+    container_name: video-test
+    ports:
+       - "8001:80"
+    environment:
+      - PORT=80
+      - VIDEO_STORAGE_HOST=storage-test
+      - VIDEO_STORAGE_PORT=80
+      - ConnectionStrings_DefaultConnection=Server=SOCBAYMAU,1433;database=VideoStreaming;User Id=admin;Password=120316
+    depends_on:
+      - sql-server-db
+    restart: "no"

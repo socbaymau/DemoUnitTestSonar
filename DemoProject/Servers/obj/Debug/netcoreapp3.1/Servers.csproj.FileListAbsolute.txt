@@ -1,0 +1,16 @@
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\bin\Debug\netcoreapp3.1\Servers.deps.json
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\bin\Debug\netcoreapp3.1\Servers.runtimeconfig.json
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\bin\Debug\netcoreapp3.1\Servers.runtimeconfig.dev.json
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\bin\Debug\netcoreapp3.1\Servers.dll
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\bin\Debug\netcoreapp3.1\Servers.pdb
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\bin\Debug\netcoreapp3.1\Data.dll
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\bin\Debug\netcoreapp3.1\Data.pdb
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.csproj.AssemblyReference.cache
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.AssemblyInfoInputs.cache
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.AssemblyInfo.cs
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.csproj.CoreCompileInputs.cache
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.csproj.CopyComplete
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.dll
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.pdb
+D:\Microservices\DemoMicroservices\C#\DemoProject\Servers\obj\Debug\netcoreapp3.1\Servers.genruntimeconfig.cache

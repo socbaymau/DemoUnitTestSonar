@@ -1,0 +1,65 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
+#For more information, please see https://aka.ms/containercompat
+
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+WORKDIR /src
+COPY ["DemoProject/DemoProject.csproj", "DemoProject/"]
+COPY ["Data/Data.csproj", "Data/"]
+COPY ["Servers/Services.csproj", "Servers/"]
+COPY ["UnitTest/UnitTest.csproj", "UnitTest/"]
+RUN dotnet restore "DemoProject/DemoProject.csproj"
+COPY . .
+WORKDIR "/src/DemoProject"
+RUN apt-get update && apt-get install -y openjdk-11-jdk
+LABEL test=true
+# install the report generator tool
+RUN dotnet tool install dotnet-reportgenerator-globaltool --version 4.0.6 --tool-path /tools
+# run the test and collect code coverage (requires coverlet.msbuild to be added to test project)
+# for exclude, use %2c for ,
+RUN dotnet test DemoProject.csproj \
+    --results-directory /testresults \
+    --logger "trx;LogFileName=test_results.xml" \
+    /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=/testresults/coverage/ \
+    /p:Exclude="[xunit.*]*%2c[StackExchange.*]*"
+# generate html reports using report generator tool
+RUN /tools/reportgenerator "-reports:/testresults/coverage/coverage.cobertura.xml" "-targetdir:/testresults/coverage/reports" "-reporttypes:HTMLInline;HTMLChart"
+
+# ----
+# sonarqube analysis
+# unfortunately sonarqube can't use cobertura reports, so we need to run the tests again with opencover coverge
+RUN dotnet test DemoProject.csproj \
+    --results-directory /sqresults \
+    --logger "trx;LogFileName=sqresults.xml" \
+    /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=/sqresults/opencover.xml \
+    /p:Exclude="[xunit.*]*%2c[System.*]%2c[Microsoft.*]*%2c[StackExchange.*]*"
+
+# install SQ scanner
+RUN dotnet tool install dotnet-sonarscanner --global
+ENV PATH="${PATH}:/root/.dotnet/tools"
+RUN dotnet build-server shutdown
+# analyze using SQ
+RUN dotnet sonarscanner begin  /o:"socbaymau" \
+  /k:"socbaymau_DemoUnitTest" \
+  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="d1547fc5462a48792c3ec6b7fdac0b3e5d458618" \
+	/d:sonar.cs.vstest.reportsPaths="/sqresults/sqresults.xml" \ 
+	/d:sonar.cs.opencover.reportsPaths="/sqresults/opencover.xml" \ 
+	/d:sonar.scm.disabled=true /d:sonar.coverage.dtdVerification=true \ 
+	/d:sonar.coverage.exclusions="*Tests*.cs,*testresult*.xml,*opencover*.xml,wwwroot/**/*,Scripts/**/*,Migrations/**/*" \ 
+	/d:sonar.test.exclusions="*Tests*.cs,*testresult*.xml,*opencover*.xml,wwwroot/**/*,Scripts/**/*,Migrations/**/*"
+RUN dotnet build -c Release -o out --no-restore 
+RUN dotnet sonarscanner end /d:sonar.login="d1547fc5462a48792c3ec6b7fdac0b3e5d458618"
+
+FROM build AS publish
+RUN dotnet publish "DemoProject.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "DemoProject.dll"]

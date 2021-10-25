@@ -1,0 +1,7 @@
+D:\TaiLieu\DemoMicroservices\C#\DemoProject\DemoProject\obj\Release\netcoreapp3.1\PubTmp\Out\DemoProject.exe
+D:\TaiLieu\DemoMicroservices\C#\DemoProject\DemoProject\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+D:\TaiLieu\DemoMicroservices\C#\DemoProject\DemoProject\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+D:\TaiLieu\DemoMicroservices\C#\DemoProject\DemoProject\obj\Release\netcoreapp3.1\PubTmp\Out\DemoProject.dll
+D:\TaiLieu\DemoMicroservices\C#\DemoProject\DemoProject\obj\Release\netcoreapp3.1\PubTmp\Out\DemoProject.deps.json
+D:\TaiLieu\DemoMicroservices\C#\DemoProject\DemoProject\obj\Release\netcoreapp3.1\PubTmp\Out\DemoProject.runtimeconfig.json
+D:\TaiLieu\DemoMicroservices\C#\DemoProject\DemoProject\obj\Release\netcoreapp3.1\PubTmp\Out\DemoProject.pdb

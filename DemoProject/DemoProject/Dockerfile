@@ -26,8 +26,8 @@ ENV PATH="${PATH}:/root/.dotnet/tools"
 RUN dotnet sonarscanner begin  /o:"socbaymau" \
   /k:"socbaymau_DemoUnitTestSonar" \
   /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="8c495f26ccfd23a10574b568587741fdae1d9066"
-#RUN dotnet build -c Release -o out --no-restore
-RUN dotnet build "DemoProject.csproj" -c Release -o /app/build
+RUN dotnet build -c Release -o out --no-restore
+#RUN dotnet build "DemoProject.csproj" -c Release -o /app/build
 RUN dotnet sonarscanner end /d:sonar.login="8c495f26ccfd23a10574b568587741fdae1d9066"
 
 #RUN dotnet test "DemoProject.csproj" --logger "trx;LogFileName=webapplication1.trx" 
